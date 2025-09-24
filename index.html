@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Image/redwinepng.png" type="image/x-icon">
+    <title>Red Wine Restaurant</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva de Mesas</h1>
+
+        <h2>Mesas Disponibles</h2>
+        <div id="availableTables" class="table-list"></div>
+
+        <h2>Mesas Ocupadas</h2>
+        <div id="occupiedTables" class="table-list"></div>
+
+        <h3>Realizar reservas</h3>
+        <input type="text" id="customerName" placeholder="Nombre del Cliente">
+        <input type="number" id="tableNumber" placeholder="Número de Mesa" min = "1" max = "12">
+        <input type="date" id="reservationDate" placeholder="Fecha de reserva">
+        <input type="time" id="reservationTime" placeholder="Hora de reserva">
+        <button id="reserveButton">Reservar Mesa</button>
+
+        <h3>Emitir reporte de reservas</h3>
+        <button id="reportButton">Generar reporte</button>
+        <pre id="reportOutput"></pre>
+
+    </div>
+    <script src="script.js"></script>   
+</body>
+</html>
