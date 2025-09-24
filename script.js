@@ -30,7 +30,6 @@ function renderTables(){
     availableTablesDiv.innerHTML= '';
     occupiedTablesDiv.innerHTML= '';
 
-    // Solo mostrar mesas disponibles (sin reservas activas)
     availableTables.forEach(table =>{
         const tableDiv = document.createElement('div');
         tableDiv.className = 'table';
@@ -44,7 +43,6 @@ function renderTables(){
         availableTablesDiv.appendChild(tableDiv);
     });
 
-    // Mostrar reservas activas
     occupiedTables.forEach(table => {
         const tableDiv = document.createElement('div');
         tableDiv.className = 'table';
@@ -138,8 +136,7 @@ function isTimeSlotAvailable(tableNumber, newDateTime) {
         if (reservation.number === tableNumber) {
             const existingTime = new Date(reservation.dateTime);
 
-            // Solo verificar conflicto si es el mismo día
-            if (newTime.toDateString() === existingTime.toDateString()) {
+             if (newTime.toDateString() === existingTime.toDateString()) {
                 const timeDifference = Math.abs(newTime - existingTime);
                 if (timeDifference < minDifference) {
                     return false;
@@ -177,4 +174,5 @@ function generateReport() {
 }
 
 renderTables();
+
 
