@@ -34,7 +34,7 @@ function renderTables(){
     availableTables.forEach(table =>{
         const tableDiv = document.createElement('div');
         tableDiv.className = 'table';
-        tableDiv.innerHTML = `<img src="image/mesa.png" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;
+        tableDiv.innerHTML = `<img src="image/mesa.PNG" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;
 
         const reserveButton = document.createElement('button');
         reserveButton.className = 'button';
@@ -48,7 +48,7 @@ function renderTables(){
     occupiedTables.forEach(table => {
         const tableDiv = document.createElement('div');
         tableDiv.className = 'table';
-        tableDiv.innerHTML = `<img src="image/mesa.png" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;
+        tableDiv.innerHTML = `<img src="image/mesa.PNG" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;
         const releaseButton = document.createElement('button');
         releaseButton.className = 'button';
         releaseButton.textContent = 'Liberar';
@@ -175,4 +175,5 @@ function generateReport() {
         reportOutput.textContent += 'No hay reservas actuales.';
     }
 }
+
 renderTables();
